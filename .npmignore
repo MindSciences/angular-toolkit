@@ -3,6 +3,5 @@
 tsconfig.json
 tslint.js
 .circleci
-*.ts
 !*.d.ts
 !schematics/*/files/**/*.ts

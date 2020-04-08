@@ -39,15 +39,11 @@ export function prepareBrowserConfig(
 
   // We always need to output the build to `www` because it is a hard
   // requirement of Cordova.
-  if ('outputPath' in options) {
-    optionsStarter.outputPath = join(cordovaBasePath, normalize('www'));
-  }
+  optionsStarter.outputPath = join(cordovaBasePath, normalize('www'));
 
   // Cordova CLI will error if `www` is missing. The Angular CLI deletes it
   // by default. Let's keep it around.
-  if ('deleteOutputPath' in options) {
-    optionsStarter.deleteOutputPath = false;
-  }
+  optionsStarter.deleteOutputPath = false;
 
   // Initialize an empty script array to make sure assets are pushed even when
   // scripts is not configured in angular.json
